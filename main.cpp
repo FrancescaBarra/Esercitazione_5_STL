@@ -18,12 +18,15 @@ int main()
     }
 
     Gedim::UCDUtilities utilities;
-    utilities.ExportPoints("./Cell0Ds.inp",
+    utilities.ExportPoints("./Cell0Ds.ucd",
                            mesh.Cell0DsCoordinates);
 
-    utilities.ExportSegments("./Cell1Ds.inp",
+    utilities.ExportSegments("./Cell1Ds.ucd",
                              mesh.Cell0DsCoordinates,
                              mesh.Cell1DsExtrema);
+							 
+	test_lati(mesh);
+	test_area(mesh);
 
     return 0;
 }
